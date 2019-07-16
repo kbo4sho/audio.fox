@@ -23,6 +23,8 @@ public class ClickConnect : MonoBehaviour
                 if (hit.rigidbody.tag == "Hookable")
                 {
                     Debug.Log("Hookable clicked");
+                    SpringJoint joint = GetComponent<SpringJoint>();
+                    joint.connectedBody = hit.rigidbody;
                     // Connect the joint to the new hookpoint
                 }
                    
