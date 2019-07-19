@@ -33,7 +33,7 @@ public class HookPointGenerator : MonoBehaviour
                 }
             }else
             {
-                child.transform.position = new Vector3(child.transform.position.x + (child.transform.position.x == 0 ? _timer - child.delayStart : Time.deltaTime), child.transform.position.y);
+                child.transform.position = new Vector3(child.transform.position.x - (child.transform.position.x == 0 ? _timer - child.delayStart : Time.deltaTime), child.transform.position.y);
             }
         }
     }
