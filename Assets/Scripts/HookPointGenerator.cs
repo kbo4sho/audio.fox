@@ -14,14 +14,12 @@ public class HookPointGenerator : MonoBehaviour
     void Start()
     {
         _children = this.GetComponentsInChildren<HookPointGeneratorChild>();
-        Debug.Log(_children);
     }
 
     // Update is called once per frame
     void Update()
     {
         _timer += Time.deltaTime;
-        Debug.Log(_timer);
 
         foreach (var child in _children)
         {
