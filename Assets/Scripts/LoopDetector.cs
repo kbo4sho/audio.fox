@@ -10,14 +10,12 @@ public class LoopDetector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        _children = this.GetComponentsInChildren<HookPointGeneratorChild>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _children = this.GetComponentsInChildren<HookPointGeneratorChild>();
-
         foreach (var child in _children)
         {
             if (child.started)
