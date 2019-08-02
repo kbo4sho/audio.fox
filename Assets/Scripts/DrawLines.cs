@@ -26,7 +26,10 @@ public class DrawLines : MonoBehaviour
         // Assign start of rope to player position
         lRend.SetPosition(0, player.transform.position);
         // Assign other end of rope to spring joint connected body position
-        lRend.SetPosition(1, player.GetComponent<SpringJoint>().connectedBody.position);
+        if (player.GetComponent<SpringJoint>().connectedBody)
+        {
+            lRend.SetPosition(1, player.GetComponent<SpringJoint>().connectedBody.position);
+        }
     }
 
     private void Update() {
