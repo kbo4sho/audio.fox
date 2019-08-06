@@ -30,7 +30,10 @@ public class LevelManager : MonoBehaviour
     {   
         if(action is Loop)
         {
-            Debug.Log("YAAA");
+            Debug.Log("Loop");
+        }else if(action is EnterFinal)
+        {
+            Debug.Log("Enter Final");
         }
     }
 

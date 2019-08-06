@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance = null;
+    public float startCordinates;
+    public float endCordinates;
     private int level = 1;
 
     private void Awake()
@@ -18,11 +20,17 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             DontDestroyOnLoad(gameObject);
         }
+        
+    }
+
+    void Start()
+    {
         InitGame();
     }
 
     private void InitGame()
     {
+
         LevelManager.instance.InitLevel(level);
     }
 }
