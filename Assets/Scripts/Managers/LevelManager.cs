@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     {
         if(instance == null)
         {
-            instance = new LevelManager();
+            instance = this;
 
         } else if (instance != this) {
             Destroy(gameObject);

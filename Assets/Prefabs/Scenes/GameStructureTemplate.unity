@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startCordinates: 0
-  endCordinates: -20
+  endCordinates: -31
 --- !u!114 &632299602
 MonoBehaviour:
   m_ObjectHideFlags: 0
