@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StageBasic : MonoBehaviour, IStage{
 
-    public HookPointGeneratorChild[] Childs => GetComponentsInChildren<HookPointGeneratorChild>(true);
+    public Translateable[] Childs => GetComponentsInChildren<Translateable>(true);
 
     public bool CanAdvance => true;
 

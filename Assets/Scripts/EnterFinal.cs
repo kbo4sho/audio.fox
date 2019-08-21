@@ -2,6 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnterFinal : IAction
+public class LevelComplete : IAction
 {
 }

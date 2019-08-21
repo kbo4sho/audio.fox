@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HookPointGeneratorChild : MonoBehaviour
+public class Translateable : MonoBehaviour
 {
     public float delayStart;
     public bool started; 

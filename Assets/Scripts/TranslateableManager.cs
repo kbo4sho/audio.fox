@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HookPointGenerator : MonoBehaviour
+public class TranslateableManager : MonoBehaviour
 {
 
     // public List<GameObject> hookPoints;
     // WIll look at children in the UI instead, means the delay needs to be configured in the UI as well.
     private IStage[] _stages;
-    private HookPointGeneratorChild[] _children;
+    private Translateable[] _children;
     private float _timer;
     private bool isComplete;
     private int _activeStageIndex;
@@ -51,8 +51,15 @@ public class HookPointGenerator : MonoBehaviour
                 return;
             }
         }
-        SetStageActive(_activeStageIndex++);
-        // LevelManager.instance.CallAction(new EnterFinal());
-        // TODO next stage maybe?
+
+        if (_activeStageIndex < _stages.Length-1)
+        {
+            SetStageActive(_activeStageIndex++);
+        }
+        else
+        {
+            LevelManager.instance.CallAction(new LevelComplete());
+            
+        }
     }
 }

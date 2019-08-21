@@ -6,7 +6,7 @@ public class LevelManager : MonoBehaviour
 {
 
     public static LevelManager instance = null;
-    // private int level = 1;
+    private int level = 1;
 
     private void Awake()
     {
@@ -31,9 +31,9 @@ public class LevelManager : MonoBehaviour
         if(action is Loop)
         {
             Debug.Log("Loop");
-        }else if(action is EnterFinal)
+        }else if(action is LevelComplete)
         {
-            Debug.Log("Enter Final");
+            Debug.Log("Level Complete");
         }
     }
 
