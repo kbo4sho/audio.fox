@@ -6,13 +6,13 @@ public class LevelManager : MonoBehaviour
 {
 
     public static LevelManager instance = null;
-    // private int level = 1;
+    private int level = 1;
 
     private void Awake()
     {
         if(instance == null)
         {
-            instance = new LevelManager();
+            instance = this;
 
         } else if (instance != this) {
             Destroy(gameObject);
@@ -30,7 +30,10 @@ public class LevelManager : MonoBehaviour
     {   
         if(action is Loop)
         {
-            Debug.Log("YAAA");
+            Debug.Log("Loop");
+        }else if(action is LevelComplete)
+        {
+            Debug.Log("Level Complete");
         }
     }
 
