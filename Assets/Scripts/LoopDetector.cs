@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class LoopDetector : MonoBehaviour
 {
-    private HookPointGeneratorChild[] _children;
+    private Translateable[] _children;
     public Rigidbody playerRigidBody;
 
     void Start()
     {
-        _children = this.GetComponentsInChildren<HookPointGeneratorChild>();
+        _children = this.GetComponentsInChildren<Translateable>();
     }
 
     void Update()

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4467693782145837702}
   - component: {fileID: 4467693782145837701}
   m_Layer: 0
-  m_Name: GeneratorContainer
+  m_Name: HookpointGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startCordinates: 0
-  endCordinates: 4
+  endCordinates: -32
